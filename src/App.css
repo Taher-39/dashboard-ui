@@ -2,6 +2,16 @@
 .dash-text-color{
   color: #11193C;
 }
+.color-info{
+  color: #00E38C;
+}
+.color-danger {
+  color: #FF4B75;
+}
+.btn-bg{
+  background-color: #00E38C;
+  color: lightgoldenrodyellow;
+}
 
 /* sidebar style */
 .sidebar-main {
@@ -19,3 +29,13 @@
 }
 
 /* dash hero area */
+.hero-border {
+  border-right: 1px solid lightGray;
+}
+.currency-list {
+  background-color: lightblue;
+  border-radius: 50%;
+}
+.currency-icon-color {
+  color: #2464FC;
+}

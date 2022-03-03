@@ -1,41 +1,46 @@
-import { FaDollarSign, FaEuroSign, FaYenSign } from 'react-icons/fa'
+import { FaDollarSign, FaEuroSign, FaYenSign, FaCaretDown, FaCaretUp } from 'react-icons/fa'
 import { BsCurrencyBitcoin } from 'react-icons/bs'
+import { HeroData } from '../Data/HeroData'
 
 const DashboardHero = () => {
-    const heros = [
-        {
-            id: 1,
-            heading: "BALANCE",
-            money: "$ 6500.00"
-        },
-        {
-            id: 12,
-            heading: "PROFITS",
-            money: "$ 750.00"
-        },
-        {
-            id: 3,
-            heading: "LOSSES",
-            money: "$ 350.00"
-        },
-        {
-            id: 4,
-            heading: "CURRENCIES",
-        },
-    ]
   return (
-    <div className='row d-flex justify-content-between'>
+    <div className='row'>
         {
-            heros.map(hero => (
-                <div key={hero.id} className="col-md-3" style={{borderRight: "1px solid lightGray"}}>
-                   <div className="text-center">
+            HeroData.map(hero => (
+                <div key={hero.id} className="col-md-3 col-sm-6 hero-border">
+                   <div className="text-center py-sm-3 my-3">
                    <h6 className='text-secondary'>{hero.heading}</h6>
-                    {hero.money ? <h3 className='dash-text-color'>{hero.money}</h3> : (
+                    {hero.money ? (<div className='d-md-flex justify-content-around'>
+                            <h1 className='dash-text-color'>{hero.money}</h1>
+                            { 
+                                hero.heading === "PROFITS"  && ( 
+                                <div className="color-info mt-3">
+                                    <FaCaretUp style={{fontSize:"25px"}} /> 
+                                    <span>{hero.percent}</span>
+                                </div>
+                            )}
+                            { 
+                                hero.heading === "LOSSES"  && ( 
+                                <div className="color-danger mt-3">
+                                    <FaCaretDown style={{fontSize:"25px"}} /> 
+                                    <span>{hero.percent}</span>
+                                </div>
+                            )}
+                            
+                        </div> ): (
                         <div>
-                            <span className='btn mx-2' style={{backgroundColor: "lightBlue", borderRadius: "50%"}}><FaDollarSign style={{color: '#2464FC'}} /></span>
-                            <span className='btn mx-2'style={{backgroundColor: "lightBlue", borderRadius: "50%"}}><FaEuroSign style={{color: '#2464FC'}} /></span>
-                            <span className='btn mx-2'style={{backgroundColor: "lightBlue", borderRadius: "50%"}}><FaYenSign style={{color: '#2464FC'}} /></span>
-                            <span className='btn mx-2'style={{backgroundColor: "lightBlue", borderRadius: "50%"}}><BsCurrencyBitcoin style={{color: '#2464FC'}} /></span>
+                            <span className='btn mx-2 currency-list'>
+                                <FaEuroSign className='currency-icon-color' />
+                            </span>
+                            <span className='btn mx-2 currency-list'>
+                                <FaYenSign className='currency-icon-color' />
+                            </span>
+                            <span className='btn mx-2 currency-list'>
+                                <BsCurrencyBitcoin className='currency-icon-color' />
+                            </span>
+                            <span className='btn mx-2 currency-list'>
+                                <FaDollarSign className='currency-icon-color' />
+                            </span>
                         </div>
                     )}
                    </div>
