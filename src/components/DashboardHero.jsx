@@ -15,14 +15,14 @@ const DashboardHero = () => {
                             { 
                                 hero.heading === "PROFITS"  && ( 
                                 <div className="color-info mt-3">
-                                    <FaCaretUp style={{fontSize:"25px"}} /> 
+                                    <FaCaretUp className='icon-size' /> 
                                     <span>{hero.percent}</span>
                                 </div>
                             )}
                             { 
                                 hero.heading === "LOSSES"  && ( 
                                 <div className="color-danger mt-3">
-                                    <FaCaretDown style={{fontSize:"25px"}} /> 
+                                    <FaCaretDown className="icon-size" /> 
                                     <span>{hero.percent}</span>
                                 </div>
                             )}

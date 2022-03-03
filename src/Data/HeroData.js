@@ -14,7 +14,7 @@ export const HeroData = [
         id: 3,
         heading: "LOSSES",
         money: "$350.00",
-        percent: "- 48%"
+        percent: "- 35%"
     },
     {
         id: 4,

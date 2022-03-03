@@ -12,7 +12,7 @@ const DashboardHeader = () => {
             </div>
             <div className="d-md-flex d-sm-flex justify-content-between">
                 <div className='py-2'>
-                        <button className="btn btn-bg"><FaPlus /> Add Unit</button>
+                        <button className="btn header-btn"><FaPlus /> Add Unit</button>
                     </div>
                 <div className='px-md-3'>
                         <img
