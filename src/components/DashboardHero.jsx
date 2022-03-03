@@ -30,7 +30,7 @@ const DashboardHero = () => {
                 <div key={hero.id} className="col-md-3" style={{borderRight: "1px solid lightGray"}}>
                    <div className="text-center">
                    <h6 className='text-secondary'>{hero.heading}</h6>
-                    {hero.money ? <h3>{hero.money}</h3> : (
+                    {hero.money ? <h3 className='dash-text-color'>{hero.money}</h3> : (
                         <div>
                             <span className='btn mx-2' style={{backgroundColor: "lightBlue", borderRadius: "50%"}}><FaDollarSign style={{color: '#2464FC'}} /></span>
                             <span className='btn mx-2'style={{backgroundColor: "lightBlue", borderRadius: "50%"}}><FaEuroSign style={{color: '#2464FC'}} /></span>

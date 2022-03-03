@@ -1,3 +1,8 @@
+/* text color */
+.dash-text-color{
+  color: #11193C;
+}
+
 /* sidebar style */
 .sidebar-main {
   border-right: 1px solid lightgray;
@@ -5,3 +10,12 @@
   padding: 20px 0 0 40px;
   min-height: 100vh;
 }
+
+/* img circle */
+.img-circle{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* dash hero area */
