@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Analytics from "./Pages/Analytics";
 import Dashboard from "./Pages/Dashboard";
 import Notification from "./Pages/Notification";
@@ -8,7 +10,7 @@ import "./App.css";
 import NotFound from "./Pages/NotFound";
 import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
-import PrivateRoute from "./Pages/PrivateRoute";
+import PrivateRoute from "./components/PrivateRoute";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 
@@ -36,6 +38,7 @@ function App() {
           <Route path="/notification" element={<Notification />} />
         </Routes>
       </Router>
+      <ToastContainer />
     </UserContext.Provider>
   );
 }

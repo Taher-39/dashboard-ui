@@ -1,21 +1,21 @@
 /* text color */
-.dash-text-color{
-  color: #11193C;
+.dash-text-color {
+  color: #11193c;
 }
-.color-info{
-  color: #00E38C;
+.color-info {
+  color: #00e38c;
 }
 .color-danger {
-  color: #FF4B75;
+  color: #ff4b75;
 }
 .color-blue {
-  color: #2464FC;
+  color: #2464fc;
 }
 .icon-size {
   font-size: 25px;
 }
 /* img circle */
-.img-circle{
+.img-circle {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -29,16 +29,16 @@
 }
 
 /* dash header area */
-.header-btn{
-  background-color: #00E38C;
+.header-btn {
+  background-color: #00e38c;
   color: lightgoldenrodyellow;
 }
 .header-btn:hover {
-transform: translateY(-7px);
-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+  transform: translateY(-7px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 .header-btn:active {
-transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
 /* dash hero area */
@@ -50,16 +50,16 @@ transform: translateY(-3px);
   border-radius: 50%;
 }
 .currency-icon-color {
-  color: #2464FC;
+  color: #2464fc;
 }
 
 /* team member area */
-.team-btn{
+.team-btn {
   background-color: lightBlue;
   border-radius: 500px;
 }
-.team-manager-color{
-  color: #2464FC;
+.team-manager-color {
+  color: #2464fc;
 }
 
 /* comparison area */
@@ -68,21 +68,24 @@ transform: translateY(-3px);
   height: 40px;
   border: 1px solid lightblue;
 }
-.comparison-border{
-  border-bottom: 10px solid #00E38C;
+.comparison-border {
+  border-bottom: 10px solid #00e38c;
   border-radius: 50px;
 }
 
-/* sign-in area
-.passwordInputDiv {
+.main-side {
   position: relative;
+  width: 50px;
 }
 
-.showPassword {
-  cursor: pointer;
+.footer-side {
   position: absolute;
-  top: -4%;
-  right: 1%;
-  padding: 1rem;
+  top: 70%;
+  right: 35%;
+}
 
-} */
+@media screen and (max-width: 992px) {
+  .main-side {
+    min-width: 100vw;
+  }
+}

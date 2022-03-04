@@ -1,11 +1,10 @@
-import React from 'react'
-import DashboardSidebar from '../components/DashboardSidebar'
+import DashSidebar from '../components/DashSidebar'
 
 const Trading = () => {
   return (
     <div className='row'>
       <div className="col-md-2">
-        <DashboardSidebar />
+        <DashSidebar />
       </div>
       <div className="col-md-10">
         

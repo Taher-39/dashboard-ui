@@ -1,4 +1,17 @@
-<h3>This is single page dashboard site using reactJs and Bootstrap</h3>
-<h6>First clone this then</h6>
-<h6>npm install</h6>
-<h6>npm start</h6>
+<h2>This is single page dashboard site using reactJs, Bootstrap and firebase.</h1>
+
+```
+I use 'firebase' for google authentication and registration using email and password.
+
+I use 'react-pro-sidebar' for built-in sidebar. And also use 'react-toastify' for error massage showing.
+
+And use 'react-icons' and 'react-router-dom' for routing.
+
+
+If run this projects in your pc clone this and
+'npm install' then 'npm start'
+
+
+```
+
+![alt text](./src/Assets/Imgs/dashboard.png)

@@ -2,7 +2,7 @@ import { auth } from "../firebase.config";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { UserContext } from "../App";
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const GoogleAuth = () => {
     const navigate = useNavigate()
@@ -23,10 +23,7 @@ const GoogleAuth = () => {
   }
   return (
     <div className='text-center mt-5'>
-        
-       { login.name ? <button className='btn btn-outline-danger' onClick={() => setLogin({})}>Log-Out</button> :
          <button className='btn btn-outline-success' onClick={signInHandler}>Google-SignIn</button> 
-       }
     </div>
   )
 }

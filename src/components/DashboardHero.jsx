@@ -7,7 +7,7 @@ const DashboardHero = () => {
     <div className='row'>
         {
             HeroData.map(hero => (
-                <div key={hero.id} className="col-md-3 col-sm-6 hero-border">
+                <div key={hero.id} className="col-md-4 col-lg-3 col-sm-6 hero-border">
                    <div className="text-center py-sm-3 my-3">
                    <h6 className='text-secondary'>{hero.heading}</h6>
                     {hero.money ? (<div className='d-md-flex justify-content-around'>
