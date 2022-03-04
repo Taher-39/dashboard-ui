@@ -1,46 +1,13 @@
-import React from 'react'
-import metricsImg from '../Assets/Imgs/metrics.png'
-import analyticsImg from '../Assets/Imgs/analytics.png'
-import currencyExchangeImg from '../Assets/Imgs/currency-exchange-2.png'
-import soundWaveImg from '../Assets/Imgs/sound-wave.png'
 import { Link } from 'react-router-dom'
+import { SidebarItems } from '../Data/SidebarItems'
 
 const DashboardSidebar = () => {
-    const Items = [
-        {
-            id: 1,
-            itemName: "Dashboard",
-            itemLink: "dashboard",
-            itemImage: metricsImg
-        },
-        {
-            id: 2,
-            itemName: "Analytics",
-            itemLink: "analytics",
-            itemImage: analyticsImg
-        },
-        {
-            id: 3,
-            itemName: "Trading",
-            itemLink: "trading",
-            itemImage: currencyExchangeImg
-        },
-        {
-            id: 4,
-            itemName: "Notification",
-            itemLink: "notification",
-            itemImage: soundWaveImg
-        },
-
-    ]
-
-
   return (
-    <div className='sidebar-main'>
+    <div className='sidebar-main row'>
         {
-            Items.map(item => (
-                <div key={item.id} className="text-center " style={{width: "110px"}}>
-                    <Link to={`/${item.itemLink}`} className='my-4 mx-1' >
+            SidebarItems.map(item => (
+                <div key={item.id} className="text-center col-sm-3 col-xs-3" style={{minWidth: "100px"}}>
+                    <Link to={`/${item.itemLink}`} className='my-4 mx-1 sidebar-item' >
                         <img className='img-fluid' src={item.itemImage} alt="source/img" />
                         <p>{item.itemName}</p>
                     </Link>
@@ -49,7 +16,7 @@ const DashboardSidebar = () => {
         }
 
         <div>
-            <Link to="/">Logout</Link>
+            <Link className='btn' to="/signIn">Logout</Link>
         </div>
     </div>
   )

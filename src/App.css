@@ -72,3 +72,17 @@ transform: translateY(-3px);
   border-bottom: 10px solid #00E38C;
   border-radius: 50px;
 }
+
+/* sign-in area
+.passwordInputDiv {
+  position: relative;
+}
+
+.showPassword {
+  cursor: pointer;
+  position: absolute;
+  top: -4%;
+  right: 1%;
+  padding: 1rem;
+
+} */
