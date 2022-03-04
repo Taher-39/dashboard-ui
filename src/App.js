@@ -8,8 +8,9 @@ import "./App.css";
 import NotFound from "./Pages/NotFound";
 import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
-import GoogleAuth from "./Pages/GoogleAuth";
 import PrivateRoute from "./Pages/PrivateRoute";
+import SignIn from "./Pages/SignIn";
+import SignUp from "./Pages/SignUp";
 
 export const UserContext = createContext();
 
@@ -21,7 +22,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/signIn" element={<GoogleAuth />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
 
           <Route path="/dashboard" element={<PrivateRoute />}>
             <Route path="/dashboard" element={<Dashboard />} />

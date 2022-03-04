@@ -8,7 +8,8 @@ const Home = () => {
      <div className="my-5 list-style-none">
 
         <div className="my-3"><Link to="/dashboard">Dashboard</Link></div>
-        <div className="my-3"><Link to="/signIn">Sign-In</Link></div>
+        <div className="my-3"><Link to="/sign-in">Sign-in</Link></div>
+        <div className="my-3"><Link to="/profile">Profile</Link></div>
         
      </div>
     </div>

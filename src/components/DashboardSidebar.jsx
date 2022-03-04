@@ -16,7 +16,7 @@ const DashboardSidebar = () => {
         }
 
         <div>
-            <Link className='btn' to="/signIn">Logout</Link>
+            <Link className='btn' to="/sign-in">Logout</Link>
         </div>
     </div>
   )

@@ -1,7 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from "react-router-dom"
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from "../firebase.config";
+import GoogleAuth from './GoogleAuth';
+import { UserContext } from '../App';
+
 const SignIn = () => {
+  const [login, setLogin ] = useContext(UserContext)
+
   const [formData, setFormData] = useState({
     email: "",
     password: ""
@@ -22,10 +28,9 @@ const SignIn = () => {
     e.preventDefault()
 
     try {
-      const auth = getAuth()
       const userCredential = await signInWithEmailAndPassword(auth, email, password)
       const user = userCredential.user;
-      console.log(user.displayName, user)
+      setLogin({name: user.displayName, email: user.email, img: user.photoURL});
       navigate("/dashboard")
     } catch (error) {
       console.log(error.message);
@@ -35,7 +40,11 @@ const SignIn = () => {
 
   return (
     <>
-      <h2 className='text-secondary my-3 text-center'>Welcome Again</h2>
+      <div className="text-center my-3">
+      {
+        login.name && <Link className='btn btn-outline-success' to="/profile">Profile</Link>
+      }
+      </div>
       <div className="container d-flex justify-content-center">
         <div style={{ width: '600px' }} className='p-4 mt-5 shadow rounded'>
           <form onSubmit={submitHandler}>
@@ -67,10 +76,10 @@ const SignIn = () => {
           </div>
 
           <div className="text-center">
-            <button className='btn btn-outline-info w-50  my-3' type="submit">Google Sign-In</button>
+            <GoogleAuth />
           </div>
           <div className="text-center">
-            <Link className='btn btn-outline-danger w-50  my-3' to="/">Home</Link>
+            <Link className='btn btn-outline-primary w-50  my-3' to="/">Home</Link>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { UserContext } from '../App'
 
 const PrivateRoute = () => {
   const [login, setLogin] = useContext(UserContext)
-  return login.name ? <Outlet /> : <Navigate to="/signIn" />
+  return login.name ? <Outlet /> : <Navigate to="/sign-in" />
 }
 
 export default PrivateRoute
