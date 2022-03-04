@@ -1,5 +1,5 @@
 <h2>This is single page dashboard site using reactJs, Bootstrap and firebase.</h1>
-[LiveDemo](https://dashboard-app-fawn.vercel.app/)
+[link](https://dashboard-app-fawn.vercel.app/)
 
 ```
 I use 'firebase' for google authentication and registration using email and password.
